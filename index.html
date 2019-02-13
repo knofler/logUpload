@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Simple Log Upload</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <div>
+    <form id="addForm" action="/add" method="POST">
+      <input type="text" name="addData" /><br>
+      <input type="submit" value="Add">
+    </form>
+  </div>
+
+  <div>
+    <form id="appendForm" action="/append" method="POST">
+      File to Append: <input type="text" name="fileToAppend" placeholder="Please provide file name" /><br>
+      New Text: <textarea type="text" name="appendFile"></textarea>
+      <br />
+      <input type="submit" value="Append">
+    </form>
+  </div>
+
+  <div>
+    <form action="/upload" enctype="multipart/form-data" method="post">
+      <input type="file" name="file-to-upload">
+      <input type="submit" value="Upload">
+    </form>
+  </div>
+</body>
+
+</html>
